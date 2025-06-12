@@ -1,7 +1,7 @@
 package Uses;
 
 
-public class useTickets {
+public class UseTicket {
     
     private String fechaInicio;
     private int bicycleId;
@@ -47,7 +47,7 @@ public class useTickets {
 
     
 
-    public useTickets(String fechaInicio, int bicycleId, int userId, String fechaFinalizacion) {
+    public UseTicket(String fechaInicio, int bicycleId, int userId, String fechaFinalizacion) {
         this.fechaInicio = fechaInicio;
         this.bicycleId = bicycleId;
         this.userId = userId;

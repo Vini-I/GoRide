@@ -2,7 +2,7 @@ package Maintenance;
 
 
 
-public class MaintenanceTickets {
+public class MaintenanceTicket {
     
     private String maintenanceDate;
     private String description;
@@ -25,7 +25,7 @@ public class MaintenanceTickets {
         return bicycleId;
     }
 
-    public MaintenanceTickets(String fechaMantenimiento, String description, String technicianName, int bicycleId) {
+    public MaintenanceTicket(String fechaMantenimiento, String description, String technicianName, int bicycleId) {
         this.maintenanceDate = fechaMantenimiento;
         this.description = description;
         this.technicianName = technicianName;
