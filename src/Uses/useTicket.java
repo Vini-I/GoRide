@@ -3,14 +3,14 @@ package Uses;
 
 public class UseTicket {
     
-    private String fechaInicio;
+    private String rentDate;
     private int bicycleId;
     private int userId;
     private String dueDate;
     public static final String fechaRegex = "^\\d{2}/\\d{2}/\\d{4}$";
 
     public String getFechaInicio() {
-        return fechaInicio;
+        return rentDate;
     }
 
     public int getBicycleId() {
@@ -33,7 +33,7 @@ public class UseTicket {
     
     public void setFechaInicio(String fechaInicio) {
          if (validateDateStart(fechaInicio)){
-             this.fechaInicio = fechaInicio;
+             this.rentDate = fechaInicio;
          }
     }
     
@@ -48,7 +48,7 @@ public class UseTicket {
     
 
     public UseTicket(String fechaInicio, int bicycleId, int userId, String fechaFinalizacion) {
-        this.fechaInicio = fechaInicio;
+        this.rentDate = fechaInicio;
         this.bicycleId = bicycleId;
         this.userId = userId;
          if (validateDateFinal(fechaFinalizacion)){
@@ -58,7 +58,7 @@ public class UseTicket {
 
     @Override
     public String toString() {
-        return "Fecha de Inicio del Alquiler: " + fechaInicio + "Bicycle Id: " + bicycleId + " User Id: " + userId + " Fecha de Finalizacion del Alquiler: " + dueDate + '}';
+        return "Fecha de Inicio del Alquiler: " + rentDate + "Bicycle Id: " + bicycleId + " User Id: " + userId + " Fecha de Finalizacion del Alquiler: " + dueDate + '}';
     }
   
     
