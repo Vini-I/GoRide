@@ -35,6 +35,4 @@ public class Bicycle {
     public String toString() {
         return "\nBicycle:\nId:" + id + "\nStatus: " + status + "\nBrand: " + brand;
     }
-    
-    
 }
