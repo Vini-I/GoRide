@@ -1,27 +1,12 @@
-package Users;
+package People;
 
 
 
-public class user {
-    private String name;
-    private int id;
+public class User extends Civilian {
     private String phone;
-    private String email;
-
-    public String getName() {
-        return name;
-    }
-
-    public int getId() {
-        return id;
-    }
 
     public String getPhone() {
         return phone;
-    }
-
-    public String getEmail() {
-        return email;
     }
 
     public void setPhone(String phone) {
@@ -35,8 +20,13 @@ public class user {
         return phone.matches(regex);
     }
 
+    public User(int id, String name , String email, String phone) {
+        super(id, name, email);
+        this.phone = phone;
+    }
+
     @Override
     public String toString() {
-        return "\nUser:\nName: " + name + "\nId: " + id + "\nPhone: " + phone + "\nEmail:" + email;
+        return "\nUser:" + super.toString() + "\nPhone: " + phone;
     }
 }
