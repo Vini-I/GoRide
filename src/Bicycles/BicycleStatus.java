@@ -1,22 +1,35 @@
+/*
+ * Click nbfs://nbhost/SystemFileSystem/Templates/Licenses/license-default.txt to change this license
+ * Click nbfs://nbhost/SystemFileSystem/Templates/Classes/Enum.java to edit this template
+ */
 package Bicycles;
 
+/**
+ *
+ * @author rodol
+ */
+
+//Estructura basica de un Enum
 public enum BicycleStatus {
-    AVAILABLE("available"),
-    RENTED("rented"),
-    MAINTENANCE("maintenance");
+    AVAILABLE ("Available"),
+    RENTED ("Rented"),
+    MAINTENANCE("Maintenance");
     
+    // va a guardar los valores ^
     private final String status;
     
-    BicycleStatus(String status) {
+    // constructor
+    BicycleStatus(String status){
         this.status = status;
     }
     
-    public String getStatus() {
+    // getter
+    public String getStatus(){
         return status;
     }
     
-    @Override
-    public String toString() {
+    //toString
+    public String toString(){
         return status;
     }
 }
