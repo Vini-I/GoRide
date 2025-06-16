@@ -23,7 +23,7 @@ public class Bicycle {
             this.status = status;
     }
 
-    public Bicycle(int id, String brand, BicycleStatus status) {
+    public Bicycle(int id, String brand) {
         this.id = id;
         this.brand = brand;
         this.status = BicycleStatus.AVAILABLE;
@@ -31,7 +31,7 @@ public class Bicycle {
     
     @Override
     public String toString(){
-        return "Id: " + id + " Estado: " + status + " Marca: " + brand;
+        return "\nBicycle: \nId: " + id + "\nEstado: " + status + "\nMarca: " + brand;
     }
     
 }

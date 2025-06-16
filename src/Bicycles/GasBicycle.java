@@ -19,14 +19,14 @@ public class GasBicycle extends Bicycle{
         this.nivelCombustible = nivelCombustible;
     }
 
-    public GasBicycle(String nivelCombustible, int id, String brand, BicycleStatus status) {
-        super(id, brand, status);
-        this.nivelCombustible = nivelCombustible;
+    public GasBicycle(int id, String brand) {
+        super(id, brand);
+        this.nivelCombustible = "50";
     }
 
     @Override
     public String toString() {
-        return "Gas Bicycle: " + super.toString() + " Nivel Combustible: " + nivelCombustible;
+        return "\nGas Bicycle: " + super.toString() + "\nNivel Combustible: " + nivelCombustible;
     }
     
     

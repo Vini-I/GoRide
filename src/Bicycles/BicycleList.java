@@ -62,5 +62,9 @@ public class BicycleList implements Lists<Bicycle> {
         }
         return null;
     }
+
+    public BicycleList() {
+        this.list = new Bicycle[100];
+    }
     
 }
