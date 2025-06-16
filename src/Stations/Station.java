@@ -3,6 +3,9 @@
  * Click nbfs://nbhost/SystemFileSystem/Templates/Classes/Class.java to edit this template
  */
 package Stations;
+
+import Bicycles.Bicycle;
+
 /**
  *
  * @author rodol
@@ -12,8 +15,7 @@ public class Station {
     private int id;
     private String location;
     private int maxCapacity;
-    // duda lista bicicletas como se hace
-    private int [] bicycleList;
+    private Bicycle[] bicycles;
 
     public int getId() {
         return id;
@@ -27,8 +29,8 @@ public class Station {
         return maxCapacity;
     }
 
-    public int[] getBicycleList() {
-        return bicycleList;
+    public Bicycle[] getBicycleList() {
+        return bicycles;
     }
 
     public void setMaxCapacity(int maxCapacity) {
@@ -38,16 +40,21 @@ public class Station {
     public void setLocation(String location) {
         this.location = location;
     }
-
-    public void setBicycleList(int[] bicycleList) {
-        this.bicycleList = bicycleList;
+    
+    public void addBicycle(Bicycle bicycle) {
+        for (int i = 0; i < maxCapacity; i++) {
+            if(bicycles[i] == null) {
+                bicycles[i] = bicycle;
+                break;
+            }
+        }
     }
 
     public Station(int id, String location, int maxCapacity) {
         this.id = id;
         this.location = location;
         this.maxCapacity = maxCapacity;
-        this.bicycleList = new int [maxCapacity];
+        this.bicycles = new Bicycle[maxCapacity];
     }
 
     @Override
