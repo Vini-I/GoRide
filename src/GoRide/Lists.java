@@ -8,6 +8,12 @@ package GoRide;
  *
  * @author autoa
  */
-public interface Lists {
+public interface Lists <T> {
+    public boolean add(T t);
     
+    public boolean delete(T t);
+    
+    public void sort();
+    
+    public T search(Object id);
 }
