@@ -12,11 +12,15 @@ import Bicycles.Bicycle;
  */
 public class MaintenanceRegister {
     
+    private int id;
     private LocalDateTime maintenanceDate;
     private String description;
     private Technician technician;
     private Bicycle bicycle;
 
+    public int getId() {
+        return id;
+    }
 
     public LocalDateTime getMaintenanceDate() {
         return maintenanceDate;
