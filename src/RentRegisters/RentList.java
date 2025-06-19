@@ -11,25 +11,60 @@ import GoRide.Lists;
  * @author autoa
  */
 public class RentList implements Lists<RentRegister> {
+    private RentRegister[] list;
 
     @Override
     public boolean add(RentRegister t) {
-        throw new UnsupportedOperationException("Not supported yet."); // Generated from nbfs://nbhost/SystemFileSystem/Templates/Classes/Code/GeneratedMethodBody
+        for (int i = 0; i < list.length; i++) {
+            if (list[i] == null) {
+                list[i] = t;
+                return true;
+            }
+        }
+        return false;
     }
 
     @Override
     public boolean delete(RentRegister t) {
-        throw new UnsupportedOperationException("Not supported yet."); // Generated from nbfs://nbhost/SystemFileSystem/Templates/Classes/Code/GeneratedMethodBody
+        for (int i = 0; i < list.length; i++) {
+            if (list[i] == t) {
+                list[i] = null;
+                return true;
+            }
+        }
+        return false;
     }
 
     @Override
     public void sort() {
-        throw new UnsupportedOperationException("Not supported yet."); // Generated from nbfs://nbhost/SystemFileSystem/Templates/Classes/Code/GeneratedMethodBody
+        int max = list.length;
+        for (int i = 0; i < max; i++) {
+            for (int j = 0; j < max-1; j++) {
+                if (list[j] != null && list[j+1] != null) {
+                    if (list[j].getId() > list[j+1].getId()) {
+                        RentRegister temp = list[j];
+                        list[j] = list[j+1];
+                        list[j+1] = temp;
+                    }
+                }
+            }
+        }   
     }
 
     @Override
     public RentRegister search(Object id) {
-        throw new UnsupportedOperationException("Not supported yet."); // Generated from nbfs://nbhost/SystemFileSystem/Templates/Classes/Code/GeneratedMethodBody
+        int idt = Integer.parseInt(id.toString());
+        int max = list.length;
+        for (int i = 0; i < max; i++) {
+            if (list[i].getId() == idt) {
+                return list[i];
+            }
+        }
+        return null;
+    }
+
+    public RentList() {
+        this.list = new RentRegister[100];
     }
     
 }
